@@ -52,8 +52,11 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <!-- TODO: set the entree in the view model when the RadioButton is clicked -->
+                <!--Note: On onClick, for some reason, having double quotes (") was causing an error,
+                had to switch to single quotes (') for the beginning -->
                 <RadioButton
                     android:id="@+id/cauliflower"
+                    android:onClick='@{() -> viewModel.setEntree("cauliflower")}'
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
@@ -82,8 +85,13 @@
                     app:layout_constraintTop_toBottomOf="@id/cauliflower_description" />
 
                 <!-- TODO: set the entree in the view model when the RadioButton is clicked -->
+                <!-- I think that the issue might be that you can't have the same kinds of quotes in
+                an onClick? And you can't set something with a single quote? I'm not sure if this was
+                covered in the reading, but I tried again with single quotes and it didn't work either.
+                Switching to single quote, double quotes, single quote-->
                 <RadioButton
                     android:id="@+id/chili"
+                    android:onClick='@{() -> viewModel.setEntree("chili")}'
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
@@ -114,6 +122,7 @@
                 <!-- TODO: set the entree in the view model when the RadioButton is clicked -->
                 <RadioButton
                     android:id="@+id/pasta"
+                    android:onClick='@{() -> viewModel.setEntree("pasta")}'
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
@@ -142,8 +151,10 @@
                     app:layout_constraintTop_toBottomOf="@id/pasta_description" />
 
                 <!-- TODO: set the entree in the view model when the RadioButton is clicked -->
+                <!-- Is skillet a kind of food? Or is it just served on a skillet? -->
                 <RadioButton
                     android:id="@+id/skillet"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
@@ -178,14 +189,16 @@
             <!-- TODO: set the text to the current subtotal value from the view model -->
             <TextView
                 android:id="@+id/subtotal"
+                android:text="@{@string/subtotal(viewModel.subtotal)}"
                 style="@style/Widget.LunchTray.TextView.Subtotal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider"
                 tools:text="Subtotal $5.00"/>
 
-            <!-- TODO: cancel the order when clicked -->
+            <!-- TODO: cancel the order when clicked (use databinding)-->
             <Button
                 android:id="@+id/cancel_button"
+                android:onClick="@{() -> databinding.cancelOrder()}"
                 style="@style/Widget.Order.Button.Cancel"
                 app:layout_constraintEnd_toStartOf="@id/next_button"
                 app:layout_constraintStart_toStartOf="parent"
@@ -194,6 +207,7 @@
             <!-- TODO: go to the next screen when clicked -->
             <Button
                 android:id="@+id/next_button"
+                android:onClick="@{() -> databinding.goToNextScreen()}"
                 style="@style/Widget.Order.Button.Next"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
