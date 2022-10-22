@@ -60,6 +60,7 @@ class SideMenuFragment : Fragment() {
             lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
             // TODO: initialize the SideMenuFragment variables
+            databinding = this@SideMenuFragment
         }
     }
 
@@ -77,7 +78,9 @@ class SideMenuFragment : Fragment() {
      */
     fun cancelOrder() {
         // TODO: Reset order in view model
+        sharedViewModel.resetOrder()
         // TODO: Navigate back to the [StartFragment] to start over
+        findNavController().navigate(R.id.action_sideMenuFragment_to_startOrderFragment2)
     }
 
     /**
