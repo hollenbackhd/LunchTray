@@ -2624,6 +2624,7 @@ int id actionDown 0x7f080034
 int id actionDownUp 0x7f080035
 int id actionUp 0x7f080036
 int id action_accompanimentMenuFragment_to_checkoutFragment 0x7f080233
+int id action_accompanimentMenuFragment_to_startOrderFragment2 0x7f08023c
 int id action_bar 0x7f080037
 int id action_bar_activity_content 0x7f080038
 int id action_bar_container 0x7f080039
@@ -2636,6 +2637,7 @@ int id action_container 0x7f08003e
 int id action_context_bar 0x7f08003f
 int id action_divider 0x7f080040
 int id action_entreeMenuFragment_to_sideMenuFragment 0x7f080235
+int id action_entreeMenuFragment_to_startOrderFragment2 0x7f08023d
 int id action_image 0x7f080041
 int id action_menu_divider 0x7f080042
 int id action_menu_presenter 0x7f080043
@@ -2643,6 +2645,7 @@ int id action_mode_bar 0x7f080044
 int id action_mode_bar_stub 0x7f080045
 int id action_mode_close_button 0x7f080046
 int id action_sideMenuFragment_to_accompanimentMenuFragment 0x7f080236
+int id action_sideMenuFragment_to_startOrderFragment2 0x7f08023e
 int id action_startOrderFragment_to_entreeMenuFragment 0x7f080237
 int id action_text 0x7f080047
 int id actions 0x7f080048

@@ -16,11 +16,14 @@
 package com.example.lunchtray.ui.order
 
 import android.os.Bundle
+import android.util.Log.d
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.lunchtray.R
 import com.example.lunchtray.databinding.FragmentStartOrderBinding
+import androidx.navigation.fragment.findNavController
 
 /**
  * [StartOrderFragment] allows people to click the start button to start an order.
@@ -46,6 +49,7 @@ class StartOrderFragment : Fragment() {
         // Navigate to entree menu
         binding.startOrderBtn.setOnClickListener {
             // TODO: navigate to the EntreeMenuFragment
+            findNavController().navigate(R.id.action_startOrderFragment_to_entreeMenuFragment)
         }
         return root
     }
