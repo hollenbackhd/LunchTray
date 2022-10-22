@@ -23,7 +23,7 @@
 
     <!-- TODO: Add the data binding variables of the type OrderViewModel and the CheckoutFragment -->
     <data>
-        //Note: Reference variable in entree/side/accompaniment fragments
+        <!--Note: Reference variable in entree/side/accompaniment fragments -->
         <variable
             name="viewModel"
             type="com.example.lunchtray.model.OrderViewModel" />
