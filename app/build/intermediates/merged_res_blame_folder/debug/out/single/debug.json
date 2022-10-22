@@ -8,10 +8,6 @@
         "source": "/Users/hannahhollenback/.gradle/daemon/7.4.2/com.example.lunchtray.app-main-49:/layout/fragment_entree_menu.xml"
     },
     {
-        "merged": "com.example.lunchtray.app-merged_res-47:/layout_activity_main.xml.flat",
-        "source": "com.example.lunchtray.app-main-49:/layout/activity_main.xml"
-    },
-    {
         "merged": "/Users/hannahhollenback/.gradle/daemon/7.4.2/com.example.lunchtray.app-merged_res-47:/layout_fragment_start_order.xml.flat",
         "source": "/Users/hannahhollenback/.gradle/daemon/7.4.2/com.example.lunchtray.app-main-49:/layout/fragment_start_order.xml"
     },
@@ -50,5 +46,9 @@
     {
         "merged": "/Users/hannahhollenback/.gradle/daemon/7.4.2/com.example.lunchtray.app-merged_res-47:/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "/Users/hannahhollenback/.gradle/daemon/7.4.2/com.example.lunchtray.app-main-49:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.lunchtray.app-merged_res-47:/layout_fragment_start_order.xml.flat",
+        "source": "com.example.lunchtray.app-main-49:/layout/fragment_start_order.xml"
     }
 ]
