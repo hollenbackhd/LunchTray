@@ -151,10 +151,9 @@
                     app:layout_constraintTop_toBottomOf="@id/pasta_description" />
 
                 <!-- TODO: set the entree in the view model when the RadioButton is clicked -->
-                <!-- Is skillet a kind of food? Or is it just served on a skillet? -->
                 <RadioButton
                     android:id="@+id/skillet"
-
+                    android:onClick='@{() -> viewModel.setEntree("skillet")}'
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
