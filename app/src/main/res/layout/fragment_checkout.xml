@@ -28,7 +28,7 @@
             name="viewModel"
             type="com.example.lunchtray.model.OrderViewModel" />
         <variable
-            name="OrderViewModel"
+            name="databinding"
             type="com.example.lunchtray.ui.order.CheckoutFragment" />
 
     </data>
@@ -145,7 +145,7 @@
             <!-- TODO: submit the order when clicked -->
             <Button
                 android:id="@+id/submit_button"
-                android:onClick="@{() -> OrderViewModel.submitOrder()}"
+                android:onClick="@{() -> databinding.submitOrder()}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/side_margin"
@@ -157,7 +157,7 @@
             <!-- TODO: cancel the order when clicked -->
             <Button
                 android:id="@+id/cancel_button"
-                android:onClick="@{() -> OrderViewModel.cancelOrder()}"
+                android:onClick="@{() -> databinding.cancelOrder()}"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -89,8 +89,8 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
     @Override
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
-        if (BR.OrderViewModel == variableId) {
-            setOrderViewModel((com.example.lunchtray.ui.order.CheckoutFragment) variable);
+        if (BR.databinding == variableId) {
+            setDatabinding((com.example.lunchtray.ui.order.CheckoutFragment) variable);
         }
         else if (BR.viewModel == variableId) {
             setViewModel((com.example.lunchtray.model.OrderViewModel) variable);
@@ -101,12 +101,12 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
             return variableSet;
     }
 
-    public void setOrderViewModel(@Nullable com.example.lunchtray.ui.order.CheckoutFragment OrderViewModel) {
-        this.mOrderViewModel = OrderViewModel;
+    public void setDatabinding(@Nullable com.example.lunchtray.ui.order.CheckoutFragment Databinding) {
+        this.mDatabinding = Databinding;
         synchronized(this) {
             mDirtyFlags |= 0x20L;
         }
-        notifyPropertyChanged(BR.OrderViewModel);
+        notifyPropertyChanged(BR.databinding);
         super.requestRebind();
     }
     public void setViewModel(@Nullable com.example.lunchtray.model.OrderViewModel ViewModel) {
@@ -194,6 +194,7 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
         java.lang.String subtotalAndroidStringSubtotalViewModelSubtotal = null;
         java.lang.String viewModelTaxGetValue = null;
         com.example.lunchtray.model.MenuItem viewModelEntreeGetValue = null;
+        com.example.lunchtray.ui.order.CheckoutFragment databinding = mDatabinding;
         com.example.lunchtray.model.MenuItem viewModelSideGetValue = null;
         java.lang.String viewModelSubtotalGetValue = null;
         com.example.lunchtray.model.MenuItem viewModelAccompanimentGetValue = null;
@@ -202,7 +203,6 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
         androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> viewModelSide = null;
         java.lang.String viewModelEntreeName = null;
         java.lang.String viewModelSideName = null;
-        com.example.lunchtray.ui.order.CheckoutFragment orderViewModel = mOrderViewModel;
         com.example.lunchtray.model.OrderViewModel viewModel = mViewModel;
         androidx.lifecycle.LiveData<java.lang.String> viewModelTax = null;
         java.lang.String viewModelAccompanimentFormattedPrice = null;
@@ -352,35 +352,35 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
         switch(sourceId) {
             case 1: {
                 // localize variables for thread safety
-                // OrderViewModel
-                com.example.lunchtray.ui.order.CheckoutFragment orderViewModel = mOrderViewModel;
-                // OrderViewModel != null
-                boolean orderViewModelJavaLangObjectNull = false;
+                // databinding
+                com.example.lunchtray.ui.order.CheckoutFragment databinding = mDatabinding;
+                // databinding != null
+                boolean databindingJavaLangObjectNull = false;
 
 
 
-                orderViewModelJavaLangObjectNull = (orderViewModel) != (null);
-                if (orderViewModelJavaLangObjectNull) {
+                databindingJavaLangObjectNull = (databinding) != (null);
+                if (databindingJavaLangObjectNull) {
 
 
-                    orderViewModel.submitOrder();
+                    databinding.submitOrder();
                 }
                 break;
             }
             case 2: {
                 // localize variables for thread safety
-                // OrderViewModel
-                com.example.lunchtray.ui.order.CheckoutFragment orderViewModel = mOrderViewModel;
-                // OrderViewModel != null
-                boolean orderViewModelJavaLangObjectNull = false;
+                // databinding
+                com.example.lunchtray.ui.order.CheckoutFragment databinding = mDatabinding;
+                // databinding != null
+                boolean databindingJavaLangObjectNull = false;
 
 
 
-                orderViewModelJavaLangObjectNull = (orderViewModel) != (null);
-                if (orderViewModelJavaLangObjectNull) {
+                databindingJavaLangObjectNull = (databinding) != (null);
+                if (databindingJavaLangObjectNull) {
 
 
-                    orderViewModel.cancelOrder();
+                    databinding.cancelOrder();
                 }
                 break;
             }
@@ -394,7 +394,7 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
         flag 2 (0x3L): viewModel.entree
         flag 3 (0x4L): viewModel.side
         flag 4 (0x5L): viewModel.tax
-        flag 5 (0x6L): OrderViewModel
+        flag 5 (0x6L): databinding
         flag 6 (0x7L): viewModel
         flag 7 (0x8L): null
     flag mapping end*/

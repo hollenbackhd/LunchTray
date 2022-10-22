@@ -1,11 +1,9 @@
 package androidx.databinding.library.baseAdapters;
 
 public class BR {
-  public static final int OrderViewModel = 1;
-
   public static final int _all = 0;
 
-  public static final int databinding = 2;
+  public static final int databinding = 1;
 
-  public static final int viewModel = 3;
+  public static final int viewModel = 2;
 }

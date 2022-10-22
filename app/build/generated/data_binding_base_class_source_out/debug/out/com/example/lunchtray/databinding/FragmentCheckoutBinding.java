@@ -61,7 +61,7 @@ public abstract class FragmentCheckoutBinding extends ViewDataBinding {
   protected OrderViewModel mViewModel;
 
   @Bindable
-  protected CheckoutFragment mOrderViewModel;
+  protected CheckoutFragment mDatabinding;
 
   protected FragmentCheckoutBinding(Object _bindingComponent, View _root, int _localFieldCount,
       TextView accompanimentPrice, TextView accompanimentSelection, Button cancelButton,
@@ -91,11 +91,11 @@ public abstract class FragmentCheckoutBinding extends ViewDataBinding {
     return mViewModel;
   }
 
-  public abstract void setOrderViewModel(@Nullable CheckoutFragment OrderViewModel);
+  public abstract void setDatabinding(@Nullable CheckoutFragment databinding);
 
   @Nullable
-  public CheckoutFragment getOrderViewModel() {
-    return mOrderViewModel;
+  public CheckoutFragment getDatabinding() {
+    return mDatabinding;
   }
 
   @NonNull

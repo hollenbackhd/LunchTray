@@ -56,11 +56,11 @@
                 had to switch to single quotes (') for the beginning -->
                 <RadioButton
                     android:id="@+id/cauliflower"
-                    android:onClick='@{() -> viewModel.setEntree("cauliflower")}'
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
                     android:text='@{viewModel.menuItems["cauliflower"].name}'
+                    android:onClick='@{() -> viewModel.setEntree("cauliflower")}'
                     tools:text="Entree 1" />
 
                 <TextView
